@@ -11,6 +11,7 @@ import Loader from "../components/Loader";
 import SocialMedia from "../components/SocialMedia";
 
 import { Desktop } from "../components/Desktop"
+
 import Toto from "../components/toto"
 
 const Hero = ({ camTarget }) => {

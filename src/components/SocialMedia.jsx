@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { useRef } from "react";
 
+
 const SocialMedia = () => {
     const ref = useRef();
 
@@ -66,7 +67,7 @@ const SocialMedia = () => {
                     initial="hidden"
                     animate={"visible"}
                     variants={childVariant}
-                    href="/assets/cv.pdf"
+                    href={`${import.meta.env.BASE_URL}assets/cv.pdf`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-16 sm:w-24 h-16 sm:h-24 rounded-full bg-orange border border-white/20 flex items-center justify-center hover:bg-orange transition-all hover:scale-110"

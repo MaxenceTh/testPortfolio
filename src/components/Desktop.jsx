@@ -6,7 +6,8 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Desktop(props) {
-  const { nodes, materials } = useGLTF('/models/Desktop.glb')
+  const modelPath = `${import.meta.env.BASE_URL}models/Desktop.glb`
+  const { nodes, materials } = useGLTF(modelPath)
   const { isMobile, ...groupProps } = props
   const scale = isMobile ? 0.8 : 2
   return (

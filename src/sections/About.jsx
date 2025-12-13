@@ -49,7 +49,7 @@ const About = () => {
     <section className="section-spacing" id="about">
 
 
-      <div className="container mx-auto max-w-7xl c-space ">
+      <div className="container mx-auto max-w-7xl c-space text-white ">
 
         <motion.div
           ref={ref}
@@ -96,7 +96,7 @@ const About = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.45, duration: 0.4, ease: "easeOut" }}
-        className="md:mt-60"
+        className="md:mt-60 text-white"
       >
         <ScrollVelocityContainer className="text-2xl md:text-4xl font-bold opacity-80">
           <ScrollVelocityRow baseVelocity={20} direction={1}>

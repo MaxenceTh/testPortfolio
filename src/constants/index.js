@@ -362,7 +362,7 @@ export const items = [
       status: "Intership",
       text: "MerConcept & Brest University",
       img: "./assets/MerConcept.png",
-      lien: "https://www.merconcept.fr/",
+      lien: "https://merconcept.com/",
       stack: ["Python", "Tensorflow"],
     },
     {
@@ -370,7 +370,7 @@ export const items = [
       status: "Intership",
       text: "Agence Roquette",
       img: "./assets/Roquette.png",
-      lien: "https://www.agence-roquette.com/",
+      lien: "https://www.roquette.bzh/",
       stack: ["Wordpress", "Timber", "Twig"],
     },
     {

@@ -21,7 +21,7 @@ export default function HorizontalScrollCards() {
         onClick={scrollLeft}
         className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-10
                  bg-orange shadow-xl border border-gray-300 
-                 rounded-full p-3 hover:scale-110 transition"
+                 rounded-full p-3 hover:scale-110 transition text-white"
       >
         <ChevronLeft size={26} />
       </button>
@@ -30,7 +30,7 @@ export default function HorizontalScrollCards() {
         onClick={scrollRight}
         className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-10
                    bg-orange shadow-xl border border-gray-300 
-                   rounded-full p-3 hover:scale-110 transition"
+                   rounded-full p-3 hover:scale-110 transition text-white"
       >
         <ChevronRight size={26} />
       </button>

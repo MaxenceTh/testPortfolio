@@ -1,0 +1,87 @@
+import { useState, useRef } from "react";
+import Project from "../components/Project";
+import { myProjects } from "../constants";
+import { motion, useMotionValue, useSpring, useInView } from "motion/react";
+import HorizontalScrollCards from "../components/HorizontalScrollCards";
+import { title } from "motion/react-client";
+
+
+const Projects = () => {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const springX = useSpring(x, { damping: 10, stiffness: 50 });
+  const springY = useSpring(y, { damping: 10, stiffness: 50 });
+  const handleMouseMove = (e) => {
+    x.set(e.clientX + 20);
+    y.set(e.clientY + 20);
+  };
+  const [preview, setPreview] = useState(null);
+  const ref = useRef();
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const items = [
+    {
+      title: "toto",
+      text: "toto",
+      lien: "https://google.com",
+      stack: ["React", "Tailwind", "Spring"],
+    },
+    {
+      title: "example",
+      text: "another card",
+      stack: ["React", "Javascript", "Spring"],
+    },
+    {
+      title: "example",
+      text: "another card",
+      stack: ["React", "Java", "Spring"],
+    },
+    {
+      title: "example",
+      text: "another card",
+      stack: ["React", "Tailwind", "Spring"],
+    },
+  ];
+
+  const parentVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.12,  // délai entre éléments
+        delayChildren: 0.2,     // commence un peu après
+      },
+    },
+  };
+
+  return (
+    <section
+      className=" section-spacing bg-orange-50"
+      id="work"
+    >
+
+
+
+      <div className="container mx-auto max-w-7xl c-space">
+        <motion.div
+          ref={ref}
+          variants={parentVariant}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          <motion.h2 className="text-heading text-black  ">My Selected Projects & Experiences
+
+          </motion.h2>
+
+
+        </motion.div>
+      </div>
+
+
+      <HorizontalScrollCards />
+
+
+    </section >
+  );
+};
+
+export default Projects;

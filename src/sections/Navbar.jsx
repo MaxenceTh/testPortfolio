@@ -5,16 +5,16 @@ function Navigation({ onLinkClick }) {
   return (
     <ul className="flex flex-col justify-center items-center gap-8">
       <li>
-        <a href="#home" className="text-2xl font-semibold hover:text-white" onClick={onLinkClick}>Home</a>
+        <a href="#home" className="text-2xl font-semibold text-white" onClick={onLinkClick}>Home</a>
       </li>
       <li>
-        <a href="#about" className="text-2xl font-semibold hover:text-white" onClick={onLinkClick}>About</a>
+        <a href="#about" className="text-2xl font-semibold text-white" onClick={onLinkClick}>About</a>
       </li>
       <li>
-        <a href="#work" className="text-2xl font-semibold hover:text-white" onClick={onLinkClick}>Work</a>
+        <a href="#work" className="text-2xl font-semibold text-white" onClick={onLinkClick}>Work</a>
       </li>
       <li>
-        <a href="#contact" className="text-2xl font-semibold hover:text-white" onClick={onLinkClick}>Contact</a>
+        <a href="#contact" className="text-2xl font-semibold text-white" onClick={onLinkClick}>Contact</a>
       </li>
     </ul>
   );

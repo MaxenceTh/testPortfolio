@@ -102,7 +102,7 @@ export default function HorizontalScrollCards() {
                 {item.text}
               </p>
 
-              <a href={item.lien} target="blank">
+              <a href={item.link} target="blank">
                 <button
                   className="
                     bg-orange-100 text-orange-700 font-bold rounded-full 

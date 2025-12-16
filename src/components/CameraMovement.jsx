@@ -2,7 +2,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
 import * as THREE from "three";
 
-const Toto = ({ camTarget, camTargetMobile }) => {
+const CameraMovement = ({ camTarget, camTargetMobile }) => {
   const { camera } = useThree();
   const isMobile = useMediaQuery({ maxWidth: 853 });
 
@@ -19,4 +19,4 @@ const Toto = ({ camTarget, camTargetMobile }) => {
   return null; // ce composant ne rend rien
 };
 
-export default Toto;
+export default CameraMovement;

@@ -1,9 +1,7 @@
 import { useState, useRef } from "react";
-import Project from "../components/Project";
-import { myProjects } from "../constants";
 import { motion, useMotionValue, useSpring, useInView } from "motion/react";
 import HorizontalScrollCards from "../components/HorizontalScrollCards";
-import { title } from "motion/react-client";
+
 
 
 const Projects = () => {
@@ -18,30 +16,7 @@ const Projects = () => {
   const [preview, setPreview] = useState(null);
   const ref = useRef();
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-  const items = [
-    {
-      title: "toto",
-      text: "toto",
-      lien: "https://google.com",
-      stack: ["React", "Tailwind", "Spring"],
-    },
-    {
-      title: "example",
-      text: "another card",
-      stack: ["React", "Javascript", "Spring"],
-    },
-    {
-      title: "example",
-      text: "another card",
-      stack: ["React", "Java", "Spring"],
-    },
-    {
-      title: "example",
-      text: "another card",
-      stack: ["React", "Tailwind", "Spring"],
-    },
-  ];
-
+  
   const parentVariant = {
     hidden: { opacity: 0 },
     visible: {

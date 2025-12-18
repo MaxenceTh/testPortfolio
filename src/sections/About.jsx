@@ -80,12 +80,30 @@ const About = () => {
 
           <motion.div className="flex justify-center mt-25 mb-25 md:mt-12 md:mb-12 " variants={childVariant}>
             <a href="#contact">
-            <button className="bg-orange-100 text-orange-700 font-bold rounded-full px-8 py-3 shadow-[0_4px_0_#ea580c] border-2 border-orange-300 
-          tracking-widetransition-allhover:bg-orange-200 hover:shadow-[0_6px_0_#d9460f] active:translate-y-1 active:shadow-[0_2px_0_#ea580c]">
-              Let's talk
-            </button>
+              <button className="cursor-pointer bg-orange-100 text-orange-700 font-bold rounded-full 
+                    px-4 py-2 shadow-[0_4px_0_#ea580c] border-2 border-orange-300
+                    hover:bg-orange-200 hover:shadow-[0_6px_0_#d9460f]
+                    active:translate-y-1 active:shadow-[0_2px_0_#ea580c]">
+                Let's talk
+              </button>
+            </a>
+
+            <a
+              href={`${import.meta.env.BASE_URL}assets/cv.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 ml-3 font-bold text-orange-100  px-2 py-1 rounded hover:underline transition-colors cursor-pointer"
+            >
+              <span className="text-sm">My Resume</span>
+              <span
+                className="inline-flex items-center justify-center w-5 h-5 border border-orange-100 text-orange-100 rounded-sm text-xs"
+                aria-hidden="true"
+              >
+                ↗
+              </span>
             </a>
           </motion.div>
+
 
         </motion.div>
       </div>
@@ -106,7 +124,7 @@ const About = () => {
               </span>
             ))}
           </ScrollVelocityRow>
-            <br />
+          <br />
           <ScrollVelocityRow baseVelocity={20} direction={-1}>
             {stack.slice(stack.length / 2).map((item) => (
               <span key={item.name} className="mx-6 inline-block">

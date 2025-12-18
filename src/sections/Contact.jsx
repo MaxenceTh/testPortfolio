@@ -148,7 +148,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex justify-center">
-                <motion.button variants={parentVariant} type="submit" className="w-1/3 bg-orange-100 text-orange-700 font-bold rounded-full 
+                <motion.button variants={parentVariant} type="submit" className="w-1/3 cursor-pointer bg-orange-100 text-orange-700 font-bold rounded-full 
                     px-4 py-2 shadow-[0_4px_0_#ea580c] border-2 border-orange-300
                     hover:bg-orange-200 hover:shadow-[0_6px_0_#d9460f]
                     active:translate-y-1 active:shadow-[0_2px_0_#ea580c]" >

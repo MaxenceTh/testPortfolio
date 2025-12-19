@@ -32,6 +32,7 @@ export default function ProjectDetails({
         onClick={(e) => e.stopPropagation()}
         className="
           relative w-[90%] max-w-2xl
+          max-h-[85vh] sm:max-h-[90vh]
           rounded-2xl
           bg-gradient-to-br from-orange-100 to-orange-50
           border-2 border-orange
@@ -64,13 +65,13 @@ export default function ProjectDetails({
           <img
             src={img}
             alt={title}
-            className="w-full h-56 object-cover"
+            className="w-full h-40 sm:h-56 object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-orange-100/80 to-transparent" />
         </div>
 
         {/* CONTENT */}
-        <div className="p-6">
+        <div className="p-6 overflow-y-auto max-h-[calc(85vh-10rem)] sm:max-h-none">
           <h5 className="mb-3 text-3xl font-semibold text-zinc-900 text-center">
             {title}
           </h5>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 function Navigation({ onLinkClick }) {
   return (
@@ -23,6 +24,7 @@ function Navigation({ onLinkClick }) {
 const Navbar = ({ setCamTarget, defaultCam, menuCam }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkZone, setIsDarkZone] = useState(false);
+  const { i18n } = useTranslation();
 
   // Effet pour gérer le changement de style en fonction de la position de défilement
   useEffect(() => {
@@ -60,8 +62,26 @@ const Navbar = ({ setCamTarget, defaultCam, menuCam }) => {
     setIsOpen(false);
   };
 
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "fr" ? "en" : "fr"
+    i18n.changeLanguage(newLang)
+  }
+
   return (
     <div className="relative w-full z-20">
+      <button
+        onClick={toggleLanguage}
+        className={`fixed top-4 right-20 z-50 flex items-center justify-center
+    rounded-full px-4 py-2 font-bold transition-all duration-300
+    border-2
+    ${isDarkZone || isOpen
+            ? "bg-orange border-orange text-white hover:bg-orange/90"
+            : "bg-orange-50 border-orange-50 text-orange hover:bg-orange-100"
+          }`}
+      >
+        {i18n.language === "fr" ? "FR" : "EN"}
+      </button>
       {/* BOUTON BURGER */}
       <button
         onClick={toggleMenu}

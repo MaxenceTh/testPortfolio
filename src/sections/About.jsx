@@ -5,7 +5,7 @@ import { useMediaQuery } from "react-responsive";
 import { ScrollVelocityContainer, ScrollVelocityRow } from "../components/ScrollVelocity";
 import { stack } from "../constants";
 import { motion, useInView } from "motion/react";
-
+import { useTranslation } from "react-i18next";
 
 
 // Importer le bonhomme en modele 3d qui appuie sur un levier et faire tourner la roue (framework)
@@ -45,9 +45,13 @@ const About = () => {
     },
   };
 
+  const  { t } = useTranslation();
+
   return (
     <section className="section-spacing" id="about">
 
+
+     
 
       <div className="container mx-auto max-w-7xl c-space text-white ">
 
@@ -60,19 +64,18 @@ const About = () => {
 
           {/* ABOUT ME */}
           <motion.h2 className="text-heading mb-12 md:mb-8" variants={childVariant}>
-            About Me
+             {t("aboutme")}
           </motion.h2>
 
           <div className="flex md:flex-row justify-between items-start gap-8">
 
             <div className="flex flex-col text-center md:text-left space-y-4">
               <motion.h3 className="text-pretty text-3xl md:text-4xl md:ml-0 md:mr-0 mr-10 ml-10" variants={childVariant}>
-                I'm Maxence Thomas, fullstack developer born and raised in Bretagne, France.
+                {t("aboutmetext-1")}
               </motion.h3>
 
               <motion.p className="text-pretty text-2xl mt-15 md:mt-0 md:ml-0 md:mr-0 mr-10 ml-10" variants={childVariant}>
-                I'm passionate about crafting seamless user experiences on the front end while designing secure, high-performance back-end systems.
-                Full-stack development allows me to bring ideas to life from concept to production.
+                {t("aboutmetext-2")}
               </motion.p>
             </div>
 
@@ -84,7 +87,7 @@ const About = () => {
                     px-4 py-2 shadow-[0_4px_0_#ea580c] border-2 border-orange-300
                     hover:bg-orange-200 hover:shadow-[0_6px_0_#d9460f]
                     active:translate-y-1 active:shadow-[0_2px_0_#ea580c]">
-                Let's talk
+                {t("talk")}
               </button>
             </a>
 
@@ -94,7 +97,7 @@ const About = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 ml-3 font-bold text-orange-100  px-2 py-1 rounded hover:underline transition-colors cursor-pointer"
             >
-              <span className="text-sm">My Resume</span>
+              <span className="text-sm">{t("myresume")}</span>
               <span
                 className="inline-flex items-center justify-center w-5 h-5 border border-orange-100 text-orange-100 rounded-sm text-xs"
                 aria-hidden="true"

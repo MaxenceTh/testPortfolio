@@ -15,4 +15,5 @@ Ce projet a été conçu comme un terrain d’expérimentation autour de Three.j
 - Blender
 - EmailJS
 - Framer Motion
+- i18next 
 

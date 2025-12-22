@@ -3,5 +3,73 @@
   "aboutmetext-1": "I'm Maxence Thomas, fullstack developer born and raised in Bretagne, France.",
   "aboutmetext-2":"I'm passionate about crafting seamless user experiences on the front end while designing secure, high-performance back-end systems. Full-stack development allows me to bring ideas to life from concept to production",
   "talk": "Let's talk",
-  "myresume": "My Resume"
+  "myresume": "My Resume",
+  "hi": "Hi, I'm Maxence",
+  "Iam": "I'm a",
+  "developer": "Developer",
+  "selectedProjets": "My Selected Projects",
+  "experience": "& Experiences",
+  "discover": "Discover",
+  "contactName": "Name",
+  "contactLastname": "Lastname",
+  "contactEmail": "Email",
+  "contactMessage": "Message",
+  "contactSend": "Send",
+  "contactSuccess": "Your message has been sent successfully!",
+  "contactError": "An error occurred while sending your message. Please try again later.",
+  "whatIdid": "What I did",
+  "home": "Home",
+  "about": "About",
+  "work": "Work",
+  "contact": "Contact",
+  
+  "projects": {
+    "internship": "Internship",
+    "personalStatus": "Personal Project",
+    "personal": "Me",
+
+    "addressApp": {
+      "title": "Address Validation & Correction App",
+      "company": "Finistère Assurance",
+      "desc1": "Designed and developed an address validation and correction web application",
+      "desc2": "Integrated external APIs for address control and normalization",
+      "desc3": "Implemented geolocation features using Leaflet.js, OpenStreetMap and Google Maps",
+      "desc4": "Managed spatial data with PostgreSQL / PostGIS",
+      "desc5": "Developed a SOAP API with Spring Boot"
+    },
+
+    "svrAI": {
+      "title": "Estimate the Height of SVR-Lazartigue Using AI",
+      "company": "MerConcept & Brest University",
+      "desc1": "Developed a machine learning model to estimate the height of SVR-Lazartigue from satellite images",
+      "desc2": "Preprocessed and augmented a dataset of labeled images for training",
+      "desc3": "Implemented and fine-tuned a convolutional neural network (CNN) using TensorFlow",
+      "desc4": "Evaluated model performance and optimized hyperparameters to improve accuracy",
+      "desc5": "Collaborated with domain experts to validate results and ensure practical applicability"
+    },
+
+    "roquette": {
+      "title": "Environmental Website Design",
+      "company": "Agence Roquette",
+      "desc1": "Designed and developed an environmental website with Agence Roquette",
+      "desc2": "Implemented responsive design using Timber and Twig templating",
+      "desc3": "Customized WordPress themes to meet client requirements",
+      "desc4": "Optimized site performance and accessibility"
+    },
+
+    "websport": {
+      "title": "WebSport Application",
+      "desc1": "Developed a web application for sports training and management",
+      "desc2": "Implemented user authentication and authorization with Spring Security",
+      "desc3": "Built RESTful APIs using Spring Boot and PostgreSQL",
+      "desc4": "Created a responsive frontend with React and TypeScript"
+    },
+
+    "badminton": {
+      "title": "Badminton Training Application",
+      "desc1": "Developed a badminton training application to help players improve their skills",
+      "desc2": "Implemented features for training sessions and progress tracking",
+      "desc3": "Designed a user-friendly interface using Vue.js and TailwindCSS"
+    }
+  }
 }

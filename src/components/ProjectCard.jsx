@@ -1,4 +1,6 @@
+import { useTranslation } from "react-i18next";
 export default function ProjectCard({ item, openModal }) {
+  const { t } = useTranslation();
   return (
     <div
       className="
@@ -14,7 +16,7 @@ export default function ProjectCard({ item, openModal }) {
       <div className="w-full h-[45%] sm:h-[55%] md:h-[60%]">
         <img
           src={item.img}
-          alt={item.title}
+          alt={t(item.titleKey)}
           className="w-full h-full object-cover border-b-4 border-orange"
         />
       </div>
@@ -22,7 +24,7 @@ export default function ProjectCard({ item, openModal }) {
       {/* BADGES + STACK */}
       <div className="flex flex-col items-center px-3 mt-2 text-black gap-2 text-center">
         <p className="px-3 py-1 bg-orange-100 text-black font-semibold rounded-full border border-black-300">
-          {item.status}
+          {t(item.statusKey)}
         </p>
         <div className="flex flex-wrap gap-2 justify-center max-w-full">
           {item.stack.map((tech, index) => (
@@ -38,16 +40,16 @@ export default function ProjectCard({ item, openModal }) {
 
       {/* TEXT */}
       <div className="p-4 text-center flex flex-col justify-center flex-1">
-        <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{item.title}</h3>
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{t(item.titleKey)}</h3>
         <p className="text-gray-950 mb-4 text-sm sm:text-base">
           <a
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`Open ${item.title} website`}
+            aria-label={`Open ${t(item.titleKey)} website`}
             className="inline-flex items-center gap-2 ml-3 text-sm text-black bg-orange-50 px-2 py-1 rounded border border-orange-200 hover:bg-orange-100 transition-colors cursor-pointer"
           >
-            <span className="text-sm">{item.entreprise}</span>
+            <span className="text-sm">{t(item.companyKey)}</span>
             <span
               className="inline-flex items-center justify-center w-5 h-5 border border-orange text-orange-700 rounded-sm text-xs"
               aria-hidden="true"
@@ -67,7 +69,7 @@ export default function ProjectCard({ item, openModal }) {
             "
             onClick={openModal}
           >
-            Discover
+            {t("discover")}
           </button>
         </div>
       </div>

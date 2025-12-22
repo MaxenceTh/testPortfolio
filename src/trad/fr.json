@@ -3,5 +3,73 @@
   "aboutmetext-1": "Je m'appelle Maxence Thomas, développeur full stack né et ayant grandi en Bretagne, en France.",
   "aboutmetext-2": "Je suis passionné par la création d'expériences utilisateur fluides côté front-end, tout en concevant des systèmes back-end sécurisés et performants. Le développement full stack me permet de donner vie aux idées, du concept à la production.",
   "talk": "Discutons",
-  "myresume": "Mon CV"
+  "myresume": "Mon CV",
+  "hi": "Salut, je m'appelle Maxence",
+  "Iam": "Je suis",
+  "developer": "Développeur",
+  "selectedProjets": "Mes projets sélectionnés",
+  "experience": "& Expériences",
+  "discover": "Découvrir",
+  "contactName": "Nom",
+  "contactLastname": "Prénom",
+  "contactEmail": "Email",
+  "contactMessage": "Message",
+  "contactSend": "Envoyer",
+  "contactSuccess": "Votre message a été envoyé avec succès !",
+  "contactError": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard.",
+  "whatIdid": "Ce que j'ai fait",
+  "home": "Accueil",
+  "about": "À propos",
+  "work": "Projets",
+  "contact": "Contact",
+  
+  "projects": {
+    "internship": "Stage",
+    "personalStatus": "Projet personnel",
+    "personal": "Moi",
+
+    "addressApp": {
+      "title": "Application de validation et de correction d’adresses",
+      "company": "Finistère Assurance",
+      "desc1": "Conception et développement d’une application web de validation et de correction d’adresses",
+      "desc2": "Intégration d’API externes pour le contrôle et la normalisation des adresses",
+      "desc3": "Mise en place de fonctionnalités de géolocalisation avec Leaflet.js, OpenStreetMap et Google Maps",
+      "desc4": "Gestion de données spatiales avec PostgreSQL / PostGIS",
+      "desc5": "Développement d’une API SOAP avec Spring Boot"
+    },
+
+    "svrAI": {
+      "title": "Estimation de la hauteur du SVR-Lazartigue à l’aide de l’intelligence artificielle",
+      "company": "MerConcept & Université de Brest",
+      "desc1": "Développement d’un modèle de machine learning permettant d’estimer la hauteur du SVR-Lazartigue à partir d’images satellites",
+      "desc2": "Prétraitement et augmentation d’un jeu de données d’images annotées pour l’entraînement",
+      "desc3": "Implémentation et ajustement d’un réseau de neurones convolutif (CNN) avec TensorFlow",
+      "desc4": "Évaluation des performances du modèle et optimisation des hyperparamètres afin d’améliorer la précision",
+      "desc5": "Collaboration avec des experts métier pour valider les résultats et garantir leur applicabilité"
+    },
+
+    "roquette": {
+      "title": "Conception d’un site web environnemental",
+      "company": "Agence Roquette",
+      "desc1": "Conception et développement d’un site web à thématique environnementale avec l’Agence Roquette",
+      "desc2": "Mise en place d’un design responsive à l’aide de Timber et du moteur de templates Twig",
+      "desc3": "Personnalisation de thèmes WordPress pour répondre aux besoins du client",
+      "desc4": "Optimisation des performances et de l’accessibilité du site"
+    },
+
+    "websport": {
+      "title": "Application WebSport",
+      "desc1": "Développement d’une application web dédiée à l’entraînement et à la gestion sportive",
+      "desc2": "Mise en place de l’authentification et de l’autorisation des utilisateurs avec Spring Security",
+      "desc3": "Développement d’API REST avec Spring Boot et PostgreSQL",
+      "desc4": "Création d’une interface front-end responsive avec React et TypeScript"
+    },
+
+    "badminton": {
+      "title": "Application d’entraînement au badminton",
+      "desc1": "Développement d’une application d’entraînement au badminton pour aider les joueurs à améliorer leurs performances",
+      "desc2": "Implémentation de fonctionnalités pour la gestion des séances d’entraînement et le suivi de la progression",
+      "desc3": "Conception d’une interface utilisateur intuitive avec Vue.js et TailwindCSS"
+    }
+  }
 }

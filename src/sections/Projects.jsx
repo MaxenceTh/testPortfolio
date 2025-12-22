@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { motion, useMotionValue, useSpring, useInView } from "motion/react";
 import HorizontalScrollCards from "../components/HorizontalScrollCards";
-
+import { useTranslation } from "react-i18next";
 
 
 const Projects = () => {
@@ -28,6 +28,8 @@ const Projects = () => {
     },
   };
 
+  const { t } = useTranslation();
+
   return (
     <section
       className=" section-spacing bg-orange-50"
@@ -44,7 +46,7 @@ const Projects = () => {
           animate={isInView ? "visible" : "hidden"}
         >
           <motion.h2 className="text-heading text-black  ">
-            My Selected Projects <span className="text-orange">& Experiences</span>
+            {t("selectedProjets")} <span className="text-orange">{t("experience")}</span>
           </motion.h2>
 
 

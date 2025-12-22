@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "motion/react";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 import GridPattern from "../components/GridPattern";
 
@@ -8,7 +9,7 @@ const Contact = () => {
   const ref = useRef();
   const formRef = useRef();
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
+  const { t } = useTranslation();
   const [messageSent, setMessageSent] = useState(false);
   const [error, setError] = useState(false);
 
@@ -101,7 +102,7 @@ const Contact = () => {
               <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-8">
                 <div className="flex flex-col gap-2">
                   <motion.label className="text-sm text-white" variants={parentVariant}>
-                    Name
+                    {t("contactName")}
                   </motion.label>
                   <motion.input
                     variants={childVariant}
@@ -113,7 +114,7 @@ const Contact = () => {
 
                 <div className="flex flex-col gap-2">
                   <motion.label className="text-sm text-white" variants={parentVariant}>
-                    Lastname
+                    {t("contactLastname")}
                   </motion.label>
                   <motion.input
                     variants={childVariant}
@@ -125,7 +126,7 @@ const Contact = () => {
 
                 <div className="flex flex-col gap-2">
                   <motion.label className="text-sm text-white" variants={parentVariant}>
-                    Email
+                    {t("contactEmail")}
                   </motion.label>
                   <motion.input
                     variants={childVariant}
@@ -137,7 +138,7 @@ const Contact = () => {
 
                 <div className="flex flex-col gap-2">
                   <motion.label className="text-sm text-white" variants={parentVariant}>
-                    Message
+                    {t("contactMessage")}
                   </motion.label>
                   <motion.textarea
                     variants={childVariant}
@@ -152,14 +153,14 @@ const Contact = () => {
                     px-4 py-2 shadow-[0_4px_0_#ea580c] border-2 border-orange-300
                     hover:bg-orange-200 hover:shadow-[0_6px_0_#d9460f]
                     active:translate-y-1 active:shadow-[0_2px_0_#ea580c]" >
-                  Send
+                  {t("contactSend")}
                 </motion.button>
 
                 {messageSent && (
-                  <p className="text-green-500 mt-2">Sent succesfully !</p>
+                  <p className="text-green-500 mt-2">{t("contactSuccess")}</p>
                 )}
                 {error && (
-                  <p className="text-red-500 mt-2">Error, try again !.</p>
+                  <p className="text-red-500 mt-2">{t("contactError")}</p>
                 )}
                 </div>
               </form>

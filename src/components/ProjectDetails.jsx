@@ -1,16 +1,19 @@
 import { motion } from "motion/react";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ProjectDetails({
-  title,
-  entreprise,
-  status,
+  titleKey,
+  companyKey,
+  statusKey,
   link,
   img,
   stack,
-  description,
+  descriptionKeys,
   closeModal,
 }) {
+  const { t } = useTranslation();
+
   // Bloquer le scroll du body
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -20,12 +23,8 @@ export default function ProjectDetails({
   }, []);
 
   return (
-   <div
-      className="
-        fixed inset-0 z-50
-        flex items-center justify-center
-        bg-black/40 backdrop-blur-sm
-      "
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
       onClick={closeModal}
     >
       <motion.div
@@ -46,25 +45,16 @@ export default function ProjectDetails({
         {/* CLOSE BUTTON */}
         <button
           onClick={closeModal}
-          className="
-            absolute top-4 right-4 z-10
-            p-2 rounded-full
-            bg-orange-200 hover:bg-orange
-            transition
-          "
+          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-orange-200 hover:bg-orange transition"
         >
-          <img
-            src="assets/close.svg"
-            alt="Close"
-            className="w-4 h-4"
-          />
+          <img src="assets/close.svg" alt={t(titleKey)} className="w-4 h-4" />
         </button>
 
         {/* IMAGE */}
         <div className="relative">
           <img
             src={img}
-            alt={title}
+            alt={t(titleKey)}
             className="w-full h-40 sm:h-56 object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-orange-100/80 to-transparent" />
@@ -73,18 +63,18 @@ export default function ProjectDetails({
         {/* CONTENT */}
         <div className="p-6 overflow-y-auto max-h-[calc(85vh-10rem)] sm:max-h-none">
           <h5 className="mb-3 text-3xl font-semibold text-zinc-900 text-center">
-            {title}
+            {t(titleKey)}
           </h5>
 
           <h6 className="mb-4 text-sm uppercase tracking-wider text-orange underline">
-            What I did
+            {t("whatIdid")}
           </h6>
 
           <ul className="space-y-3 text-zinc-700">
-            {description.map((line, index) => (
+            {descriptionKeys.map((key, index) => (
               <li key={index} className="flex gap-3">
                 <span className="mt-2 h-2 w-2 rounded-full bg-orange shrink-0" />
-                <span>{line}</span>
+                <span>{t(key)}</span>
               </li>
             ))}
           </ul>

@@ -67,7 +67,7 @@ const Contact = () => {
     <section className="section-spacing relative" id="contact">
       <GridPattern squares={[
         // H 
-        [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], 
+        [1, 1], [1, 2], [1, 3], [1, 4], [1, 5],
         [3, 1], [3, 2], [3, 3], [3, 4], [3, 5],
         [2, 3],
         // I 
@@ -149,24 +149,37 @@ const Contact = () => {
                 </div>
 
                 <div className="flex justify-center">
-                <motion.button variants={parentVariant} type="submit" className="w-1/3 cursor-pointer bg-orange-100 text-orange-700 font-bold rounded-full 
+                  <motion.button variants={parentVariant} type="submit" className="w-1/3 cursor-pointer bg-orange-100 text-orange-700 font-bold rounded-full 
                     px-4 py-2 shadow-[0_4px_0_#ea580c] border-2 border-orange-300
                     hover:bg-orange-200 hover:shadow-[0_6px_0_#d9460f]
                     active:translate-y-1 active:shadow-[0_2px_0_#ea580c]" >
-                  {t("contactSend")}
-                </motion.button>
+                    {t("contactSend")}
+                  </motion.button>
 
-                {messageSent && (
-                  <p className="text-green-500 mt-2">{t("contactSuccess")}</p>
-                )}
-                {error && (
-                  <p className="text-red-500 mt-2">{t("contactError")}</p>
-                )}
+                  {messageSent && (
+                    <p className="text-green-500 mt-2">{t("contactSuccess")}</p>
+                  )}
+                  {error && (
+                    <p className="text-red-500 mt-2">{t("contactError")}</p>
+                  )}
                 </div>
               </form>
             </div>
           </div>
+
         </motion.div>
+        <footer className="text-xs text-zinc-400 text-center py-4">
+          Flag icons by{" "}
+          <a
+            href="https://www.flaticon.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Flaticon
+          </a>{" "}
+          (France & UK)
+        </footer>
       </div>
     </section>
   );
